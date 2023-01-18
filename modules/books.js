@@ -1,4 +1,5 @@
 /* eslint no-use-before-define: ["error", { "variables": false }] */
+/* eslint-disable import/extensions */
 import { getBook } from './bookStorage.js';
 
 const bookList = document.getElementById('books_list');
@@ -8,7 +9,7 @@ export class Book {
   removeBook = (title) => {
     books = books.filter((book) => book.title !== title);
     localStorage.setItem('books', JSON.stringify(books));
-    window.location.reload();
+    loadBooksLocalStorage();
   };
 
   validateForm = () => {

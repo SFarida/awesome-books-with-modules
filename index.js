@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import { Book } from './modules/books.js'; // eslint-disable-line no-unused-vars
 import { addDate } from './modules/addDate.js';
 
