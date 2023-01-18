@@ -8,7 +8,7 @@ export class Book {
   removeBook = (title) => {
     books = books.filter((book) => book.title !== title);
     localStorage.setItem('books', JSON.stringify(books));
-    loadBooksLocalStorage();
+    window.location.reload();
   };
 
   validateForm = () => {
